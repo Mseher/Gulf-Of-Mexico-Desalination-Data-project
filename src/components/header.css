@@ -1,0 +1,22 @@
+/* Header Styling */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #dee2e6; /* Light grey text for better readability against dark backgrounds */
+    background-color:#212529;
+  }
+.header {
+    background-color:#212529; /* Bootstrap 'btn-danger' red */
+    text-align: center;
+    padding: 15px 0;
+    font-size: 24px;
+    font-weight: bold;
+    z-index: 999;
+  }
+  
+  /* Responsive font size for smaller devices */
+  @media (max-width: 768px) {
+    .header {
+      font-size: 20px;
+    }
+  }

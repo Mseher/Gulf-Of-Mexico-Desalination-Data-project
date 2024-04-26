@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wrapper {
+            position: relative;
+            z-index: 1;
+            display: inline-block;
+        }
+
+        .hidelogo {
+            position: absolute;
+            width: 150px;
+            height: 40px;
+            background: #222;
+            right: 0px;
+            bottom: 6px;
+            z-index: 999;
+            display: block;
+            color: #fff;
+        }
+        iframe{
+            width: 100%;
+            height: 100vh;
+            margin-top: -64.56px;
+        }
+        @media screen and (max-width: 450px) {
+            iframe{
+                margin-top: -120px;
+            }
+        }
+        @media screen and (max-width: 283px) {
+            iframe{
+                margin-top: -160px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div class="wrapper">
+        <div class="hidelogo"></div>
+        <iframe width='828' height='465' frameborder='0' allowfullscreen
+            src='https://www.firedrive.com/embed/B027D40BFCD0BBC0'></iframe>
+    </div> -->
+    <iframe src="https://eia.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=5039a1a01ec34b6bbf0ab4fd57da5eb4" frameborder="0"></iframe>
+</body>
+
+</html>
