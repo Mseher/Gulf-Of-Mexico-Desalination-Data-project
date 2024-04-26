@@ -6,7 +6,7 @@ import stateData from "../data/states.json";
 import markerPlanned from "../assets/planned.png";
 import markerUnderConstruction from "../assets/construction.png";
 import markerOperational from "../assets/online.png";
-import { Container, Row, Col, Form } from 'react-bootstrap';
+import {  Row, Col, Form } from 'react-bootstrap';
 
 import "./map.css";
 
@@ -382,6 +382,7 @@ const GulfOfMexicoMap = () => {
               <iframe
                 src="https://eia.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=5039a1a01ec34b6bbf0ab4fd57da5eb4"
                 frameBorder="0"
+                  title="energyinfra"
               ></iframe>
             )}
 
