@@ -42,10 +42,8 @@ const GulfOfMexicoMap = () => {
   };
   const handleStateDataCheckbox = (checked) => {
     if (checked) {
-      // If energy infrastructure checkbox is checked, uncheck the other checkboxes
-      setShowPlanned(false);
-      setShowUnderConstruction(false);
-      setShowOperational(false);
+      // If energy state checkbox is checked, uncheck the other checkboxes
+     
       setShowEnergyInfrastructure(false);
     }
     setShowStateData(checked);
