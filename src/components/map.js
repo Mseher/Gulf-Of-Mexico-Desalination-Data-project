@@ -36,6 +36,7 @@ const GulfOfMexicoMap = () => {
       setShowPlanned(false);
       setShowUnderConstruction(false);
       setShowOperational(false);
+      setShowStateData(false);
     }
     setShowEnergyInfrastructure(checked);
   };
