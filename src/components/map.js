@@ -321,7 +321,6 @@ const GulfOfMexicoMap = () => {
       const popupContent = document.createElement("div");
       popupContent.style.maxWidth = "100%"; // Ensure the popup does not exceed the screen width
       popupContent.innerHTML = `
-      <div class="state-popup-content">
       <div class="popup-header" style=" width: 100%;">${properties.name}</div>
       <br>
       <div><strong>Population:</strong> ${formatNumber(
@@ -496,8 +495,7 @@ const GulfOfMexicoMap = () => {
             </td>
         </tr>
     </table>
-        
-      </div>
+      
         
       </div>
     `;
