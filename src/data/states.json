@@ -5,7 +5,60 @@
             "type": "Feature",
             "id": "TX",
             "properties": {
-                "name": "Texas"
+                "name": "Texas",
+                "Population": 30029572,
+                "ElectricityData": {
+                    "Production": {
+                        "MWh": 546296953,
+                        "MWh per capita": 18.19
+                    },
+                    "Consumption": {
+                        "MWh": 490137404,
+                        "MWh per capita": 16.32
+                    },
+                    "Production from Renewable": {
+                        "MWh": 147351909,
+                        "MWh per capita": 4.91
+                    },
+                    "Production from Non-Renewable": {
+                        "MWh": 399099553,
+                        "MWh per capita": 13.29
+                    },
+                    "CO2 Emissions from Consumption": {
+                        "kg": 172744098121,
+                        "kg per capita": 5752.47
+                    }
+                },
+                "ElectricityRateandBills": {
+                    "Residential": {
+                        "centskWh": 14.32,
+                        "Ave. monthly Bill": "$164.66"
+                    },
+                    "Commercial": {
+                        "centskWh": 8.96,
+                        "Ave. monthly Bill": "$735.65"
+                    },
+                    "Industrial": {
+                        "centskWh": 6.6,
+                        "Ave. monthly Bill": "$2659.9"
+                    }
+                },
+                "AverageResidentialMonthlyWaterBill": "$37",
+                "WaterData": {
+                    "Current Water Demand": {
+                        "acre-feet/year": 88700000
+                    },
+                    "In-State Supply ": {
+                        "acre-feet/year": 86800000
+                    }
+                },
+                "WaterUsagebyType": {
+                    "Municipal": "42%",
+                    "Irrigation": "41%",
+                    "Livestock": "2%",
+                    "Industry": "11%",
+                    "ElectricPower": "4%"
+                }
             },
             "geometry": {
                 "type": "Polygon",
@@ -627,7 +680,60 @@
             "type": "Feature",
             "id": "LA",
             "properties": {
-                "name": "Louisiana"
+                "name": "Louisiana",
+                "Population": 4590241,
+                "ElectricityData": {
+                    "Production": {
+                        "MWh": 99153448,
+                        "MWh per capita": 21.6
+                    },
+                    "Consumption": {
+                        "MWh": 96293230,
+                        "MWh per capita": 20.98
+                    },
+                    "Production from Renewable": {
+                        "MWh": 3226881,
+                        "MWh per capita": 0.7
+                    },
+                    "Production from Non-Renewable": {
+                        "MWh": 95926567,
+                        "MWh per capita": 20.9
+                    },
+                    "CO2 Emissions from Consumption": {
+                        "kg": 36377291634,
+                        "kg per capita": 7924.92
+                    }
+                },
+                "ElectricityRateandBills": {
+                    "Residential": {
+                        "centskWh": 11.43,
+                        "Ave. monthly Bill": "$141.57"
+                    },
+                    "Commercial": {
+                        "centskWh": 10.15,
+                        "Ave. monthly Bill": "$676.14"
+                    },
+                    "Industrial": {
+                        "centskWh": 5.79,
+                        "Ave. monthly Bill": "$10300.08"
+                    }
+                },
+                "AverageResidentialMonthlyWaterBill": "$21",
+                "WaterData": {
+                    "Current Water Demand": {
+                        "acre-feet/year": 12600000
+                    },
+                    "In-State Supply ": {
+                        "acre-feet/year": 9800000
+                    }
+                },
+                "WaterUsagebyType": {
+                    "Municipal": "4%",
+                    "Irrigation": "13%",
+                    "Livestock": "1%",
+                    "Industry": "16%",
+                    "ElectricPower": "30%"
+                }
             },
             "geometry": {
                 "type": "Polygon",
@@ -945,7 +1051,60 @@
             "type": "Feature",
             "id": "MS",
             "properties": {
-                "name": "Mississippi"
+                "name": "Mississippi",
+                "Population": 2940057,
+                "ElectricityData": {
+                    "Production": {
+                        "MWh": 74231007,
+                        "MWh per capita": 25.25
+                    },
+                    "Consumption": {
+                        "MWh": 49976521,
+                        "MWh per capita": 17
+                    },
+                    "Production from Renewable": {
+                        "MWh": 1925486,
+                        "MWh per capita": 0.65
+                    },
+                    "Production from Non-Renewable": {
+                        "MWh": 72305521,
+                        "MWh per capita": 24.59
+                    },
+                    "CO2 Emissions from Consumption": {
+                        "kg": 18828364630,
+                        "kg per capita": 6404.08
+                    }
+                },
+                "ElectricityRateandBills": {
+                    "Residential": {
+                        "centskWh": 13.37,
+                        "Ave. monthly Bill": "$158.32"
+                    },
+                    "Commercial": {
+                        "centskWh": 12.2,
+                        "Ave. monthly Bill": "$622.9"
+                    },
+                    "Industrial": {
+                        "centskWh": 7.05,
+                        "Ave. monthly Bill": "$8504.84"
+                    }
+                },
+                "AverageResidentialMonthlyWaterBill": "$23",
+                "WaterData": {
+                    "Current Water Demand": {
+                        "acre-feet/year": 23800000
+                    },
+                    "In-State Supply ": {
+                        "acre-feet/year": 21700000
+                    }
+                },
+                "WaterUsagebyType": {
+                    "Municipal": "12%",
+                    "Irrigation": "59%",
+                    "Livestock": "1%",
+                    "Industry": "8%",
+                    "ElectricPower": "20%"
+                }
             },
             "geometry": {
                 "type": "Polygon",
@@ -1143,7 +1302,60 @@
             "type": "Feature",
             "id": "AL",
             "properties": {
-                "name": "Alabama"
+                "name": "Alabama",
+                "Population": 5074296,
+                "ElectricityData": {
+                    "Production": {
+                        "MWh": 141490039,
+                        "MWh per capita": 27.88
+                    },
+                    "Consumption": {
+                        "MWh": 86726293,
+                        "MWh per capita": 17.09
+                    },
+                    "Production from Renewable": {
+                        "MWh": 14237897,
+                        "MWh per capita": 2.81
+                    },
+                    "Production from Non-Renewable": {
+                        "MWh": 127252142,
+                        "MWh per capita": 25.08
+                    },
+                    "CO2 Emissions from Consumption": {
+                        "kg": 27917699879,
+                        "kg per capita": 5501.79
+                    }
+                },
+                "ElectricityRateandBills": {
+                    "Residential": {
+                        "centskWh": 14.58,
+                        "Ave. monthly Bill": "$166.96"
+                    },
+                    "Commercial": {
+                        "centskWh": 13.21,
+                        "Ave. monthly Bill": "$656.51"
+                    },
+                    "Industrial": {
+                        "centskWh": 7.15,
+                        "Ave. monthly Bill": "$25850.74"
+                    }
+                },
+                "AverageResidentialMonthlyWaterBill": "$30",
+                "WaterData": {
+                    "Current Water Demand": {
+                        "acre-feet/year": 22400000
+                    },
+                    "In-State Supply ": {
+                        "acre-feet/year": 20000000
+                    }
+                },
+                "WaterUsagebyType": {
+                    "Municipal": "11%",
+                    "Irrigation": "4%",
+                    "Livestock": "1%",
+                    "Industry": "8%",
+                    "ElectricPower": "76%"
+                }
             },
             "geometry": {
                 "type": "Polygon",
@@ -1289,7 +1501,60 @@
             "type": "Feature",
             "id": "FL",
             "properties": {
-                "name": "Florida"
+                "name": "Florida",
+                "Population": 22244823,
+                "ElectricityData": {
+                    "Production": {
+                        "MWh": 261069192,
+                        "MWh per capita": 11.74
+                    },
+                    "Consumption": {
+                        "MWh": 251167625,
+                        "MWh per capita": 11.29
+                    },
+                    "Production from Renewable": {
+                        "MWh": 17743773,
+                        "MWh per capita": 0.8
+                    },
+                    "Production from Non-Renewable": {
+                        "MWh": 243364528,
+                        "MWh per capita": 10.94
+                    },
+                    "CO2 Emissions from Consumption": {
+                        "kg": 93279196519,
+                        "kg per capita": 4193.3
+                    }
+                },
+                "ElectricityRateandBills": {
+                    "Residential": {
+                        "centskWh": 15.23,
+                        "Ave. monthly Bill": "$167.51"
+                    },
+                    "Commercial": {
+                        "centskWh": 11.81,
+                        "Ave. monthly Bill": "$758.08"
+                    },
+                    "Industrial": {
+                        "centskWh": 9.44,
+                        "Ave. monthly Bill": "$5119.41"
+                    }
+                },
+                "AverageResidentialMonthlyWaterBill": "$33",
+                "WaterData": {
+                    "Current Water Demand": {
+                        "acre-feet/year": 56500000
+                    },
+                    "In-State Supply ": {
+                        "acre-feet/year": 53500000
+                    }
+                },
+                "WaterUsagebyType": {
+                    "Municipal": "43%",
+                    "Irrigation": "39%",
+                    "Livestock": "1%",
+                    "Industry": "7%",
+                    "ElectricPower": "10%"
+                }
             },
             "geometry": {
                 "type": "Polygon",
