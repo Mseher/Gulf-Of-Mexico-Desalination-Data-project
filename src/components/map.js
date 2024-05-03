@@ -3,10 +3,12 @@ import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import data from "../data/desalination.json"; // Import JSON data
 import stateData from "../data/states.json";
+import countiesData from "../data/CountiesData.json";
+import counties from "../data/filteredcounties.json";
 import markerPlanned from "../assets/planned.png";
 import markerUnderConstruction from "../assets/construction.png";
 import markerOperational from "../assets/online.png";
-import {  Row, Col, Form } from 'react-bootstrap';
+import { Row, Col, Form } from "react-bootstrap";
 
 import "./map.css";
 
@@ -19,8 +21,9 @@ const GulfOfMexicoMap = () => {
     useState(false);
 
   const [showStateData, setShowStateData] = useState(false);
-
+  const [showCountyData, setShowCountyData] = useState(false);
   const [stateLayer, setStateLayer] = useState(null);
+  const [countyLayer, setCountyLayer] = useState(null);
   const [map, setMap] = useState(null);
 
   const handleDesalinationCheckboxChange = (checked) => {
@@ -35,16 +38,27 @@ const GulfOfMexicoMap = () => {
       setShowUnderConstruction(false);
       setShowOperational(false);
       setShowStateData(false);
+      setShowCountyData(false);
     }
     setShowEnergyInfrastructure(checked);
   };
   const handleStateDataCheckbox = (checked) => {
     if (checked) {
       // If energy state checkbox is checked, uncheck the other checkboxes
-     
+
       setShowEnergyInfrastructure(false);
+      setShowCountyData(false);
     }
     setShowStateData(checked);
+  };
+  const handleCountyDataCheckbox = (checked) => {
+    if (checked) {
+      // If energy state checkbox is checked, uncheck the other checkboxes
+
+      setShowEnergyInfrastructure(false);
+      setShowStateData(false);
+    }
+    setShowCountyData(checked);
   };
 
   useEffect(() => {
@@ -151,14 +165,14 @@ const GulfOfMexicoMap = () => {
       const popupContent = document.createElement("div");
       popupContent.style.maxWidth = "100%"; // Ensure the popup does not exceed the screen width
 
-      
       popupContent.innerHTML = `
       <div class="popup-header">${projectName}</div>
       <div class="popup-body">
           <table class="details-table">
               ${Object.entries(otherFields)
                 .reduce((rows, [fieldName, fieldValue], index) => {
-                  if (index % 2 === 0 || fieldName==="Latest Updates") rows.push([]); // Start a new row every two entries
+                  if (index % 2 === 0 || fieldName === "Latest Updates")
+                    rows.push([]); // Start a new row every two entries
                   const contentId = `${fieldName}_content_${Date.now()}_${Math.random()
                     .toString(36)
                     .substr(2, 9)}`;
@@ -173,16 +187,15 @@ const GulfOfMexicoMap = () => {
                           <a href="#" class="read-more-link" data-id="${contentId}">Read More</a>
                       `
                       : `${fieldValue}`;
-                      if (fieldName === "Latest Updates") {
-                        rows[rows.length - 1].push(
-                          `<tr><td  class="field-name">${fieldName}</td><td colspan="3" class="field-value">${fieldHTML}</td></tr>`
-                        );
-                      }
-                      else{
-                        rows[rows.length - 1].push(
-                          `<td class="field-name">${fieldName}</td><td class="field-value">${fieldHTML}</td>`
-                        );
-                      }
+                  if (fieldName === "Latest Updates") {
+                    rows[rows.length - 1].push(
+                      `<tr><td  class="field-name">${fieldName}</td><td colspan="3" class="field-value">${fieldHTML}</td></tr>`
+                    );
+                  } else {
+                    rows[rows.length - 1].push(
+                      `<td class="field-name">${fieldName}</td><td class="field-value">${fieldHTML}</td>`
+                    );
+                  }
 
                   return rows;
                 }, [])
@@ -274,8 +287,8 @@ const GulfOfMexicoMap = () => {
           layer.on("mouseover", (e) => {
             // Change the color of the polygon to brown on hover
             e.target.setStyle({
-              fillColor: "brown",
-              color: "#d9534f",
+              fillColor: "#006400",
+              color: "#006400",
               weight: 2,
             });
           });
@@ -511,6 +524,142 @@ const GulfOfMexicoMap = () => {
     };
   }, [map, showStateData, stateLayer]);
 
+  useEffect(() => {
+    if (!map) return;
+
+    // Load GeoJSON layer
+    if (showCountyData && !countyLayer) {
+      const layer = L.geoJson(counties, {
+        onEachFeature: (feature, layer) => {
+          // Define mouseover event
+          layer.on("mouseover", (e) => {
+            // Change the color of the polygon to a shade of purple on hover
+            e.target.setStyle({
+              fillColor: "#4682B4",
+              color: "#4682B4",
+              weight: 2,
+            });
+
+            // Show county name tooltip on hover
+            layer
+              .bindTooltip(feature.properties.NAME, {
+                className: "county-tooltip",
+              })
+              .openTooltip();
+          });
+
+          // Define mouseout event
+          layer.on("mouseout", (e) => {
+            // Reset the color of the polygon to shades of orange when not hovering
+            e.target.setStyle({
+              fillColor: "#87CEEB", // Light blue
+              color: "#4682B4",
+              weight: 2,
+            });
+            layer.unbindTooltip();
+          });
+
+          if (
+            feature.properties &&
+            feature.properties.STATEFP &&
+            feature.properties.NAME
+          ) {
+            const stateFP = feature.properties.STATEFP;
+            const countyName = feature.properties.NAME;
+            const countyData = countiesData.find(
+              (data) =>
+                data.Counties.startsWith(countyName) && data.States === stateFP
+            );
+            if (countyData) {
+              const popupContent = generatePopupContent(countyData);
+              layer.bindPopup(popupContent);
+            }
+          }
+        },
+        style: {
+          // Define default styles for your polygons or based on feature properties
+          color: "#4682B4",
+          weight: 2,
+          opacity: 1,
+          fillColor: "#87CEEB",
+          fillOpacity: 0.7,
+        },
+      }).addTo(map);
+
+      setCountyLayer(layer);
+    } else if (!showCountyData && countyLayer) {
+      // Remove GeoJSON layer if it exists and the checkbox is not checked
+      map.removeLayer(countyLayer);
+      setCountyLayer(null);
+    }
+    function generatePopupContent(countyData) {
+      const popupContent = document.createElement("div");
+      popupContent.style.maxWidth = "100%"; // Ensure the popup does not exceed the screen width
+
+      popupContent.innerHTML = `
+      <div class="popup-header" style=" width: 100%;">${countyData.Counties}</div>
+      <br>
+      <div><strong>Population:</strong> ${countyData.Population}</div>
+      <div class="popup-body">
+        <table class="details-table" style="width: 100%; ">
+        <tr>
+            <!-- Water Data Column -->
+            <td style="vertical-align: top; width: 50%; padding-left: 0; padding-right: 5px;">
+                <table  >
+                    <tr><th colspan="2" style="padding-left: 0; padding-right: 5px;">Water Data</th></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">Water Demand</td><td>${countyData["Water Demand acre-feet/year"]} acre-feet/year</td></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">Water Supply</td><td>${countyData["Water Suppy acre-feet/year"]} acre-feet/year</td></tr>
+                   
+                    <tr><th colspan="2" style="padding-left: 0; padding-right: 5px;">No. of Water Utilities</th></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">${countyData["No of Water Utilities"]}</td></tr>
+                    
+    
+                    <tr><th colspan="2">Avg. Water Rates</th></tr>
+                    <tr><td style="width: 50%; padding-left: 0; padding-right: 5px;">Monthly Base Rate</td><td>$${countyData["Monthly base rate"]}</td></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">Min per 1000 gal</td><td>$${countyData["min per 1000 gal"]}</td></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">Max per 1000 gal</td><td>$${countyData["max per 1000 gal"]}</td></tr>
+
+                  </table>
+            </td>
+            <!-- Electricity Data Column -->
+            <td style="vertical-align: top; width: 50%; margin-left:2px; padding-top:0;">
+                <table >
+                    <tr><th colspan="2" >Electricity Provider/Utilities</th></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">${countyData["Electricity Providers"]} </td></tr>
+                    
+                    
+
+                    <tr><th colspan="2">Power Plants</th></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">${countyData["Plants"]}</td></tr>
+
+                    
+                    <tr><th colspan="2">Avg Residential Rate</th></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">${countyData["Residential Rate (¢)"]}/kWh</td></tr>
+                    
+
+                    <tr><th colspan="2">Residential Avg. Electric Bill</th></tr>
+                    <tr><td style="width: 40%; padding-left: 0; padding-right: 5px;">${countyData["Residential Avg. Electric Bill"]}nth</td></tr>
+                    
+                </table>
+            </td>
+        </tr>
+    </table>
+      
+        
+      </div>
+    `;
+
+      return popupContent;
+    }
+
+    return () => {
+      // Clean up the GeoJSON layer when the component unmounts or the checkbox is unchecked
+      if (map && countyLayer) {
+        map.removeLayer(countyLayer);
+      }
+    };
+  }, [map, showCountyData, countyLayer]);
+
   return (
     <Row>
       <div style={{ display: "flex", flexDirection: "row" }}>
@@ -581,6 +730,21 @@ const GulfOfMexicoMap = () => {
               />
             </Form>
           </div>
+
+          <div
+            className="county-filter"
+            style={{ textAlign: "left", paddingLeft: "10%" }}
+          >
+            <h4>County Data</h4>
+            <Form>
+              <Form.Check
+                type="checkbox"
+                label="County Data"
+                checked={showCountyData}
+                onChange={(e) => handleCountyDataCheckbox(e.target.checked)}
+              />
+            </Form>
+          </div>
         </Col>
         <Col xs={12} md={9} style={{ width: "80%" }}>
           <div className="map-container">
@@ -588,7 +752,7 @@ const GulfOfMexicoMap = () => {
               <iframe
                 src="https://eia.maps.arcgis.com/apps/instant/interactivelegend/index.html?appid=5039a1a01ec34b6bbf0ab4fd57da5eb4"
                 frameBorder="0"
-                  title="energyinfra"
+                title="energyinfra"
               ></iframe>
             )}
 
