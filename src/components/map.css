@@ -59,7 +59,6 @@ iframe {
   font-weight: bold;
   font-size: 1rem;
   border-bottom: 1px solid grey;
-  padding: 5px;
   width: 100%;
 }
 
@@ -120,16 +119,13 @@ iframe {
   color: #0056b3;
 }
 
-.desalination-filter, .energy-filter, .state-filter{
-
-}
     /* Responsive Media Queries */
     @media (max-width: 768px) {
       .map-container, .filters {
         width: 100%; /* Full width on smaller screens */
       }
       
-      .desalination-filter, .energy-filter, .state-filter, .popup-content, .field-name{
+      .desalination-filter, .energy-filter, .state-filter, .county-filter, .popup-content, .field-name{
         font-size: 12px;
       }
       
@@ -155,7 +151,7 @@ iframe {
         padding: 5px; /* Adjust padding for smaller buttons on very small devices */
       }
 
-      .desalination-filter, .energy-filter, .state-filter{
+      .desalination-filter, .energy-filter, .state-filter, .county-filter{
         font-size: 11px;
       }
     }
