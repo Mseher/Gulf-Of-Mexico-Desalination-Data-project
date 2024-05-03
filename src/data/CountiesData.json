@@ -1,0 +1,395 @@
+[
+ {
+  "Counties": "Jefferson County",
+  "States": "TX",
+  "Population": 256526,
+  "Water Demand acre-feet\/year": 355884,
+  "Water Suppy acre-feet\/year": 368750,
+  "No of Water Utilities": 13,
+  "Electricity Providers": 2,
+  "Plants": 9,
+  "Residential Rate (¢)": 13.06,
+  "Residential Avg. Electric Bill": "$166.63\/mo"
+ },
+ {
+  "Counties": "Chambers County",
+  "States": "TX",
+  "Population": 46571,
+  "Water Demand acre-feet\/year": 170846,
+  "Water Suppy acre-feet\/year": 202645,
+  "No of Water Utilities": "12 (5 IOU)",
+  "Electricity Providers": 75,
+  "Plants": 5,
+  "Residential Rate (¢)": 12.6,
+  "Residential Avg. Electric Bill": "$148.20\/mo"
+ },
+ {
+  "Counties": "Harris County",
+  "States": "TX",
+  "Population": 4731145,
+  "Water Demand acre-feet\/year": 1172537,
+  "Water Suppy acre-feet\/year": 1371751,
+  "No of Water Utilities": "511 (57 IOU, 11 Corp, 1 Non-Retail)",
+  "Monthly base rate": 22,
+  "min per 1000 gal": 2.25,
+  "max per 1000 gal": 2.25,
+  "Electricity Providers": 75,
+  "Plants": 64,
+  "Residential Rate (¢)": 13.19,
+  "Residential Avg. Electric Bill": "$150.88\/mo"
+ },
+ {
+  "Counties": "Galveston County",
+  "States": "TX",
+  "Population": 350682,
+  "Water Demand acre-feet\/year": 117349,
+  "Water Suppy acre-feet\/year": 141077,
+  "No of Water Utilities": "23 (5 IOU, 1 Corp)",
+  "Monthly base rate": 20,
+  "min per 1000 gal": 5,
+  "max per 1000 gal": 5,
+  "Electricity Providers": 82,
+  "Plants": 12,
+  "Residential Rate (¢)": 13.16,
+  "Residential Avg. Electric Bill": "$150.87\/mo"
+ },
+ {
+  "Counties": "Brazoria County",
+  "States": "TX",
+  "Population": 372031,
+  "Water Demand acre-feet\/year": 347268,
+  "Water Suppy acre-feet\/year": 323190,
+  "No of Water Utilities": "59 (15 IOU)",
+  "Monthly base rate": 54.49,
+  "min per 1000 gal": 6.73,
+  "max per 1000 gal": 6.73,
+  "Electricity Providers": 81,
+  "Plants": 24,
+  "Residential Rate (¢)": 13.17,
+  "Residential Avg. Electric Bill": "$150.74\/mo"
+ },
+ {
+  "Counties": "Matagorda County",
+  "States": "TX",
+  "Population": 36255,
+  "Water Demand acre-feet\/year": 282657,
+  "Water Suppy acre-feet\/year": 164669,
+  "No of Water Utilities": "17 (4 IOU, 5 Corp)",
+  "Electricity Providers": 82,
+  "Plants": 3,
+  "Residential Rate (¢)": 13.09,
+  "Residential Avg. Electric Bill": "$150.92\/mo"
+ },
+ {
+  "Counties": "Calhoun County",
+  "States": "TX",
+  "Population": 20106,
+  "Water Demand acre-feet\/year": 65351,
+  "Water Suppy acre-feet\/year": 69450,
+  "No of Water Utilities": "9 (4 IOU, 1 Corp)",
+  "Electricity Providers": 81,
+  "Plants": 7,
+  "Residential Rate (¢)": 13.1,
+  "Residential Avg. Electric Bill": "$151.44\/mo"
+ },
+ {
+  "Counties": "Refugio County",
+  "States": "TX",
+  "Population": 6741,
+  "Water Demand acre-feet\/year": 2776,
+  "Water Suppy acre-feet\/year": 2776,
+  "No of Water Utilities": 5,
+  "Electricity Providers": 81,
+  "Plants": 1,
+  "Residential Rate (¢)": 13.09,
+  "Residential Avg. Electric Bill": "$151.44\/mo"
+ },
+ {
+  "Counties": "Aransas County",
+  "States": "TX",
+  "Population": 23830,
+  "Water Demand acre-feet\/year": 4151,
+  "Water Suppy acre-feet\/year": 4151,
+  "No of Water Utilities": "5 (1 IOU, 1 Corp)",
+  "Electricity Providers": 80,
+  "Residential Rate (¢)": 13.14,
+  "Residential Avg. Electric Bill": "$151.62\/mo"
+ },
+ {
+  "Counties": "San Patricio County",
+  "States": "TX",
+  "Population": 68755,
+  "Water Demand acre-feet\/year": 66428,
+  "Water Suppy acre-feet\/year": 66177,
+  "No of Water Utilities": "12 (3 Corp)",
+  "Electricity Providers": 80,
+  "Plants": 6,
+  "Residential Rate (¢)": 13.11,
+  "Residential Avg. Electric Bill": "$151.61\/mo"
+ },
+ {
+  "Counties": "Nueces County",
+  "States": "TX",
+  "Population": 353178,
+  "Water Demand acre-feet\/year": 66177,
+  "Water Suppy acre-feet\/year": 118980,
+  "No of Water Utilities": "10 (3 Corp)",
+  "Electricity Providers": 81,
+  "Plants": 12,
+  "Residential Rate (¢)": 13.12,
+  "Residential Avg. Electric Bill": "$151.67\/mo"
+ },
+ {
+  "Counties": "Kleberg County",
+  "States": "TX",
+  "Population": 31040,
+  "Water Demand acre-feet\/year": 9098,
+  "Water Suppy acre-feet\/year": 8959,
+  "No of Water Utilities": "6 (1 IOU, 3 Corp)",
+  "Electricity Providers": 80,
+  "Residential Rate (¢)": 13.09,
+  "Residential Avg. Electric Bill": "$151.54\/mo"
+ },
+ {
+  "Counties": "Kenedy County",
+  "States": "TX",
+  "Population": 350,
+  "Water Demand acre-feet\/year": 1097,
+  "Water Suppy acre-feet\/year": 1039,
+  "No of Water Utilities": 1,
+  "Electricity Providers": 81,
+  "Plants": 5,
+  "Residential Rate (¢)": 13.06,
+  "Residential Avg. Electric Bill": "$151.30\/mo"
+ },
+ {
+  "Counties": "Willacy County",
+  "States": "TX",
+  "Population": 20164,
+  "Water Demand acre-feet\/year": 103157,
+  "Water Suppy acre-feet\/year": 26479,
+  "No of Water Utilities": "5 (1 Corp)",
+  "Electricity Providers": 80,
+  "Plants": 6,
+  "Residential Rate (¢)": 13.06,
+  "Residential Avg. Electric Bill": "$151.24\/mo"
+ },
+ {
+  "Counties": "Cameron County",
+  "States": "TX",
+  "Population": 421017,
+  "Water Demand acre-feet\/year": 624893,
+  "Water Suppy acre-feet\/year": 276523,
+  "No of Water Utilities": "17 (3 Corp)",
+  "Monthly base rate": 20.59,
+  "min per 1000 gal": 1.81,
+  "max per 1000 gal": 1.81,
+  "Electricity Providers": 81,
+  "Plants": 12,
+  "Residential Rate (¢)": 13.07,
+  "Residential Avg. Electric Bill": "$151.28\/mo"
+ },
+ {
+  "Counties": "Cameron Parish",
+  "States": "LA",
+  "Population": 5617,
+  "Electricity Providers": 3,
+  "Residential Rate (¢)": 12.55,
+  "Residential Avg. Electric Bill": "$158.41\/mo"
+ },
+ {
+  "Counties": "Vermilion Parish",
+  "States": "LA",
+  "Population": 57359
+ },
+ {
+  "Counties": "Iberia Parish",
+  "States": "LA",
+  "Population": 69929
+ },
+ {
+  "Counties": "St. Mary Parish",
+  "States": "LA",
+  "Population": 49406
+ },
+ {
+  "Counties": "Terrebonne Parish",
+  "States": "LA",
+  "Population": 109580
+ },
+ {
+  "Counties": "Lafourche Parish",
+  "States": "LA",
+  "Population": 97557
+ },
+ {
+  "Counties": "Jefferson Parish",
+  "States": "LA",
+  "Population": 440781
+ },
+ {
+  "Counties": "Plaquemines Parish",
+  "States": "LA",
+  "Population": 23515
+ },
+ {
+  "Counties": "Orleans Parish",
+  "States": "LA",
+  "Population": 376971
+ },
+ {
+  "Counties": "St. Bernard Parish",
+  "States": "LA",
+  "Population": 44258
+ },
+ {
+  "Counties": "St. Tammany Parish",
+  "States": "LA",
+  "Population": 264570
+ },
+ {
+  "Counties": "Tangipahoa Parish",
+  "States": "LA",
+  "Population": 133157
+ },
+ {
+  "Counties": "Hancock County",
+  "States": "MS",
+  "Population": 46053
+ },
+ {
+  "Counties": "Harrison County",
+  "States": "MS",
+  "Population": 208621
+ },
+ {
+  "Counties": "Jackson County",
+  "States": "MS",
+  "Population": 143252
+ },
+ {
+  "Counties": "Mobile County",
+  "States": "AL",
+  "Population": 414809
+ },
+ {
+  "Counties": "Baldwin County",
+  "States": "AL",
+  "Population": 231767
+ },
+ {
+  "Counties": "Escambia County",
+  "States": "FL",
+  "Population": 321905
+ },
+ {
+  "Counties": "Santa Rosa County",
+  "States": "FL",
+  "Population": 188000
+ },
+ {
+  "Counties": "Okaloosa County",
+  "States": "FL",
+  "Population": 211668
+ },
+ {
+  "Counties": "Walton County",
+  "States": "FL",
+  "Population": 75305
+ },
+ {
+  "Counties": "Bay County",
+  "States": "FL",
+  "Population": 175216
+ },
+ {
+  "Counties": "Gulf County",
+  "States": "FL",
+  "Population": 14192
+ },
+ {
+  "Counties": "Franklin County",
+  "States": "FL",
+  "Population": 12451
+ },
+ {
+  "Counties": "Wakulla County",
+  "States": "FL",
+  "Population": 33764
+ },
+ {
+  "Counties": "Jefferson County",
+  "States": "FL",
+  "Population": 14510
+ },
+ {
+  "Counties": "Taylor County",
+  "States": "FL",
+  "Population": 21796
+ },
+ {
+  "Counties": "Dixie County",
+  "States": "FL",
+  "Population": 16759
+ },
+ {
+  "Counties": "Levy County",
+  "States": "FL",
+  "Population": 42915
+ },
+ {
+  "Counties": "Citrus County",
+  "States": "FL",
+  "Population": 153843
+ },
+ {
+  "Counties": "Hernando County",
+  "States": "FL",
+  "Population": 194515
+ },
+ {
+  "Counties": "Pasco County",
+  "States": "FL",
+  "Population": 561691
+ },
+ {
+  "Counties": "Pinellas County",
+  "States": "FL",
+  "Population": 959107
+ },
+ {
+  "Counties": "Hillsborough County",
+  "States": "FL",
+  "Population": 1459762
+ },
+ {
+  "Counties": "Manatee County",
+  "States": "FL",
+  "Population": 399710
+ },
+ {
+  "Counties": "Sarasota County",
+  "States": "FL",
+  "Population": 434006
+ },
+ {
+  "Counties": "Charlotte County",
+  "States": "FL",
+  "Population": 186847
+ },
+ {
+  "Counties": "Lee County",
+  "States": "FL",
+  "Population": 760822
+ },
+ {
+  "Counties": "Collier County",
+  "States": "FL",
+  "Population": 375752
+ },
+ {
+  "Counties": "Monroe County",
+  "States": "FL",
+  "Population": 82874
+ }
+]
